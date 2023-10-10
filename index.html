@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test System</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    </head>
 <body>
     <header>
         <div class="logo">
@@ -16,21 +16,26 @@
     <div class="content">
         <h1>PESQUISA DE INTENÇÃO DE VOTOS</h1>
         <form class="pesquisa" action="processar_voto.php" method="POST">
-            <tr>
-                <td><span class="matricula-label">Digite sua matrícula:</span><br></td>
-                <td><input name="matricula" type="text"></td><br>
-            </tr>
-            <tr>
-                <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
-                <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
-                <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
-            </tr>
-            <tr>
-                <td><input class="cand1" type="radio" name="voto" value="cand1"><span>MARIA GRACIETE RODRIGUES DO AMARAL</span></td>
-                <td><input type="radio" name="voto" value="cand2"><span>WANDERSON ALEXANDRE DA SILVA QUINTO</span></td>
-                <td><input type="radio" name="voto" value="cand3"><input type="text" placeholder="Coloque o nome aqui"></td>
-                <td><input type="submit" name="enviar" value="enviar"></td>
-            </tr>
+            <table class="tabela_votacao" border="1">
+                <tr class="linha_matricula">
+                    <td colspan="3"><span class="matricula_label">Digite sua matrícula:</span>
+                    <input name="matricula" type="text"></td><br>
+                </tr>
+                <tr>
+                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
+                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
+                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
+                </tr>
+                <tr>
+                    <td><input class="cand1" type="radio" name="voto" value="cand1"><span>GRACIETE</span></td>
+                    <td><input type="radio" name="voto" value="cand2"><span>QUINTO</span></td>
+                    <td><input type="radio" name="voto" value="cand3"><input type="text" placeholder="Coloque o nome aqui"></td>
+                    
+                </tr>
+                <tr class="linha_botao">
+                    <td colspan="3"><input class="btn" type="submit" name="enviar" value="Enviar"></td>
+                </tr>
+            </table>
         </form>
     </div>
 </body>
