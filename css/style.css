@@ -10,6 +10,9 @@ nav {
 .logo{
     text-align: center;
 }
+.img{
+    padding: 0.5em;
+}
 body{
     background-color: #F3F3F3;
     display: inline;
@@ -44,7 +47,7 @@ h1{
     height: 5em;
 }
 .matricula_label{
-    padding-left:3em ;
+    padding-left:10em ;
 }
 .btn{
     color: #F3F3F3;
