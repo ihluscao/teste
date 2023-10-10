@@ -8,12 +8,12 @@ $sugestao = $_POST['sugestao'];
 // Calcula o hash SHA-3-256
 $hash = hash('sha3-256', $matricula);
 
-// Verifica se a matrícula já existe no banco de dados
+// VERIFICAÇÃO DE MATRICULA DUPLICADA
 $sql = "SELECT * FROM resultado WHERE matricula = '$hash'";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 0) {
-    // A matrícula não existe, então podemos inserir no banco de dados
+    // INSERÇÃO DA MATRICULA CASO NÃO EXISTA NO BANCO DE DADOS
     $sql = "INSERT INTO resultado (matricula, candidato, sugestao) VALUES (?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
@@ -63,7 +63,9 @@ $conn->close();
             }
             ?>
         </p>
-        <a href="index.php" class="btn">Retornar à Página Inicial</a>
+        <div class="botao-voltar">
+            <a href="index.php" class="btn">Retornar à Página Inicial</a>
+        </div>
     </div>
 </body>
 </html>
