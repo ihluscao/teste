@@ -10,6 +10,5 @@
     if(!$conn){
         die("Erro:" . mysqli_connect());
     }
-    echo "Conectado";
     
     ?>
