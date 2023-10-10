@@ -15,26 +15,22 @@ $result = $conn->query($sql);
 
 if ($result->num_rows == 0) {
     // A matrícula não existe, então podemos inserir no banco de dados
-    $sql = "INSERT INTO resultado (matricula) VALUES ('$hash')";
-    if ($conn->query($sql) === TRUE){
-        echo "Matrícula inserida com sucesso!<br>";
+    $sql = "INSERT INTO resultado (matricula, candidato, sugestao) VALUES (?, ?, ?)";
+    
+    $stmt = $conn->prepare($sql);
+    
+    if ($stmt !== false) {
+        $stmt->bind_param("sss", $hash, $candidatoEscolhido, $sugestao);
+        if ($stmt->execute()) {
+            echo "Dados inseridos com sucesso.<br>";
+        } else {
+            echo "Erro ao inserir dados:<br> " . $stmt->error;
+        }
     } else {
-        echo "Erro ao inserir a matrícula:<br> " . $conn->error;
+        echo "Erro ao preparar a consulta.<br>";
     }
 } else {
     echo "Esta matrícula já existe no banco de dados.<br>";
-}
-
-$sql = "INSERT INTO resultado (candidato, sugestao) VALUES (?, ?)";
-
-$stmt = $conn->prepare($sql);
-
-$stmt->bind_param("ss", $candidatoEscolhido, $sugestao);
-
-if ($stmt->execute()) {
-    echo "Dados inseridos com sucesso.<br>";
-} else {
-    echo "Erro ao inserir dados:<br> " . $stmt->error;
 }
 
 $conn->close();
