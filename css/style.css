@@ -72,6 +72,6 @@ input[name="matricula"]{
 
 }
 .btn:hover{
-    transition: background-color 1s ease;
+    transition: background-color 0.6s ease;
     background-color:#433d93;
 }

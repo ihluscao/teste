@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pesquisa de Intenção de Votos</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test System</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
 <body>
-    <h1>Pesquisa de Intenção de Votos</h1>
-    
-    <?php
-    // Verifique se a pesquisa está ativa (você pode implementar isso de acordo com o período da pesquisa)
-    $pesquisaAtiva = true;
-
-    if ($pesquisaAtiva) {
-        echo '<form method="post" action="processar_voto.php">';
-        echo '<label for="candidato1">Candidato 1:</label>';
-        echo '<input type="radio" name="voto" id="candidato1" value="Candidato 1"><br>';
-        
-        echo '<label for="candidato2">Candidato 2:</label>';
-        echo '<input type="radio" name="voto" id="candidato2" value="Candidato 2"><br>';
-        
-        echo '<label for="sugestao">Sugestão do Público:</label>';
-        echo '<input type="radio" name="voto" id="sugestao" value="Sugestão do Público"><br>';
-        
-        echo '<input type="submit" value="Votar">';
-        echo '</form>';
-    } else {
-        echo '<p>A pesquisa está encerrada.</p>';
-    }
-    ?>
-
+    <header>
+        <div class="logo">
+            <img class="img" src="img/logo_uepa2_0.png" alt="Logotipo da UEPA">
+        </div>
+        <div class="barra-horizontal"></div>
+    </header>
+    <div class="content">
+        <h1>PESQUISA DE INTENÇÃO DE VOTOS</h1>
+        <form class="pesquisa" action="processar_voto.php" method="POST">
+            <table class="tabela_votacao" border="1">
+                <tr class="linha_matricula">
+                    <td colspan="3" class="matricula_cell"><span class="matricula_label">Digite sua matrícula:</span>
+                    <input name="matricula" type="text"></td><br>
+                </tr>
+                <tr>
+                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
+                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
+                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
+                </tr>
+                <tr class="linha_candidatos">
+                    <td><input type="radio" name="candidato" value="cand1"><span>Candidato 1</span></td>
+                    <td><input type="radio" name="candidato" value="cand2"><span>Candidato 2</span></td>
+                    <td><input type="radio" name="candidato" value="cand3"><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
+                    
+                </tr>
+                <tr class="linha_botao">
+                    <td colspan="3"><input class="btn" type="submit" name="enviar" value="Enviar"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>

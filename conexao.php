@@ -1,6 +1,6 @@
 <?php
     $servername = "localhost";
-    $database = "dcenter";
+    $database = "eleicao";
     $username = "root";
     $password = "";
 
