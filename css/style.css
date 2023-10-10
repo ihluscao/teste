@@ -34,20 +34,31 @@ h1{
     padding: 2.5em;
     width: 12em;
 }
-.content span{
-    font-size: 15px;
-}
+
 .tabela_votacao{
     margin: 0 auto;
 }
 .linha_matricula{
     height: 5em;
 }
+.linha_candidatos{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
 .linha_botao{
     height: 5em;
+    text-align: center;
 }
 .matricula_label{
-    padding-left:10em ;
+    padding-left:7em;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+input[name="matricula"]{
+    width: 400px;
+    border-radius: 5px;
 }
 .btn{
     color: #F3F3F3;
