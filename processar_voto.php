@@ -1,3 +1,3 @@
 <?php
-@echo "ja deu certo"
+echo "ja deu certo"
 ?>
