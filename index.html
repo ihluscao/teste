@@ -15,7 +15,7 @@
     </header>
     <div class="content">
         <h1>PESQUISA DE INTENÇÃO DE VOTOS</h1>
-        <form class="pesquisa" action="processar_voto.php" method="POST">
+        <form class="pesquisa" action="insere.php" method="POST">
             <table class="tabela_votacao" border="1">
                 <tr class="linha_matricula">
                     <td colspan="3" class="matricula_cell"><span class="matricula_label">Digite sua matrícula:</span>
