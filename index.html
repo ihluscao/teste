@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test System</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    </head>
 <body>
     <header>
         <div class="logo">
@@ -16,9 +16,9 @@
     <div class="content">
         <h1>PESQUISA DE INTENÇÃO DE VOTOS</h1>
         <form class="pesquisa" action="processar_voto.php" method="POST">
-            <table class="tabela_votacao" border="3">
-                <tr>
-                    <td colspan="3"><span class="matricula-label">Digite sua natrícula:</span>
+            <table class="tabela_votacao" border="1">
+                <tr class="linha_matricula">
+                    <td colspan="3"><span class="matricula_label">Digite sua natrícula:</span>
                     <input name="matricula" type="text"></td><br>
                 </tr>
                 <tr>
@@ -32,8 +32,8 @@
                     <td><input type="radio" name="voto" value="cand3"><input type="text" placeholder="Coloque o nome aqui"></td>
                     
                 </tr>
-                <tr>
-                    <td colspan="3"><input type="submit" name="enviar" value="enviar"></td>
+                <tr class="linha_botao">
+                    <td colspan="3"><input class="btn" type="submit" name="enviar" value="Enviar"></td>
                 </tr>
             </table>
         </form>
