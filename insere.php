@@ -63,9 +63,7 @@ $conn->close();
             }
             ?>
         </p>
-        <div class="botao-voltar">
-            <a href="index.php" class="btn">Retornar à Página Inicial</a>
-        </div>
+        <center><a href="index.php" class="btn">Retornar à Página Inicial</a></center>
     </div>
 </body>
 </html>
