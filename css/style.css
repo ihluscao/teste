@@ -78,3 +78,7 @@ input[name="matricula"]{
 .botao_voltar{
     text-align: center;
 }
+#container{
+    width: 100%; 
+    height: 400px;
+}
