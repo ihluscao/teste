@@ -1,24 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     
-    function graphicsWithData() {
-        $.ajax({
-            url: 'consulta.php', 
-            method: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                
-                data.forEach(function (item) {
-                    item.votos = parseInt(item.votos, 10);
-                });
-
-                construirGrafico(data);
-            },
-            error: function (xhr, status, error) {
-                console.log(error);
-            }
-        });
-    }
+    
     function construirGrafico(data) {
+
         const chart = Highcharts.chart('container', {
             chart: {
                 type: 'pie',
@@ -58,9 +42,34 @@ document.addEventListener('DOMContentLoaded', function () {
             series: [{
                 type: 'pie',
                 name: 'Votos',
-                data: data
+                data: data.map(item => {
+                    return {
+                        name: item.candidato,
+                        y: item.votos
+                    };
+                })
             }]
         });
     }
+    
+    function graphicsWithData() {
+        $.ajax({
+            url: 'consulta.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+
+                data.forEach(function (item) {
+                    item.votos = parseInt(item.votos, 10);
+                });
+
+                construirGrafico(data);
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+            }
+        });
+    }
+    
     graphicsWithData();
 });
