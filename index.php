@@ -19,7 +19,7 @@
             <table class="tabela_votacao" border="1">
                 <tr class="linha_matricula">
                     <td colspan="3" class="matricula_cell"><span class="matricula_label">Digite sua matrícula:</span>
-                    <input name="matricula" type="text"></td><br>
+                    <input name="matricula" type="text" inputmode="numeric" pattern="[0-9]*" minlength="10" maxlength="10" required></td><br>
                 </tr>
                 <tr>
                     <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
@@ -27,9 +27,9 @@
                     <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
                 </tr>
                 <tr class="linha_candidatos">
-                    <td><input type="radio" name="candidato" value="cand1"><span>Candidato 1</span></td>
-                    <td><input type="radio" name="candidato" value="cand2"><span>Candidato 2</span></td>
-                    <td><input type="radio" name="candidato" value="cand3"><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
+                    <td><input type="radio" name="candidato" value="cand1" required><span>Quinto</span></td>
+                    <td><input type="radio" name="candidato" value="cand2" required><span>Graciete</span></td>
+                    <td><input type="radio" name="candidato" value="cand3" required><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
                     
                 </tr>
                 <tr class="linha_botao">
