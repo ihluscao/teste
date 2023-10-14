@@ -13,7 +13,7 @@
         <div class="logo">
             <img class="img" src="img/logo_uepa2_0.png" alt="Logotipo da UEPA">
         </div>
-        <div class="barra-horizontal"></div>
+        <div class "barra-horizontal"></div>
     </header>
     <div class="content">
         <h1>Resposta do Processamento</h1>
@@ -41,9 +41,15 @@
                     $stmt = $conn->prepare($sql);
                     $stmt->bind_param("ss", $matriculaHash, $token);
                     if ($stmt->execute()) {
-                        $sql = "INSERT INTO resultado (matricula, candidato, sugestao) VALUES (?, ?, ?)";
+                        $candidatoInserido = $candidatoEscolhido;
+
+                        if ($candidatoEscolhido === "Outros") {
+                            $candidatoInserido = $sugestao;
+                        }
+
+                        $sql = "INSERT INTO resultado (matricula, candidato) VALUES (?, ?)";
                         $stmt = $conn->prepare($sql);
-                        $stmt->bind_param("sss", $matriculaHash, $candidatoEscolhido, $sugestao);
+                        $stmt->bind_param("ss", $matriculaHash, $candidatoInserido);
                         if ($stmt->execute()) {
                             echo "<p class='success-message'>Dados inseridos com sucesso.</p>";
                         } else {
@@ -58,7 +64,7 @@
 
                 setcookie('user_token', $token, time() + 604800);
             } else {
-                echo "<p class='error-message'>Você já votou nesta sessão. Não é possível votar novamente.</p>";
+                echo "<p class 'error-message'>Você já votou nesta sessão. Não é possível votar novamente.</p>";
             }
 
             $conn->close();
@@ -67,7 +73,6 @@
         </p>
         <center><a href="index.php" class="btn">Retornar à Página Inicial</a></center>
     </div>
-
 </body>
 
 </html>
