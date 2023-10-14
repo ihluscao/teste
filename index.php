@@ -34,8 +34,8 @@
                     <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
                 </tr>
                 <tr class="linha_candidatos">
-                    <td><input type="radio" name="candidato" value="Quinto" required><span>Quinto</span></td>
-                    <td><input type="radio" name="candidato" value="Graciete" required><span>Graciete</span></td>
+                    <td><input type="radio" name="candidato" value="Wanderson Quinto" required><span>Wanderson Quinto</span></td>
+                    <td><input type="radio" name="candidato" value="Maria Graciete" required><span>Maria Graciete</span></td>
                     <td><input type="radio" name="candidato" value="Outros" required><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
                     
                 </tr>

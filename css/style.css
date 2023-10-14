@@ -23,6 +23,12 @@ body{
     background-color: #FFFFFF;
     height: max-content;
 }
+.success-message{
+    color:#3d8f24
+}
+.error-message{
+    color: #9c1414;
+}
 h1{
     padding-top: 1em;
     text-align: center;
