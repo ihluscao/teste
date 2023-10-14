@@ -6,12 +6,14 @@
     <title>Votação - UEPA</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/validaOutros.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="candidates_chart.js"></script>
+    <script src="js/resultTable.js"></script>
+    <script src="js/candidates_chart.js"></script>
     </head>
 <body>
     <header>
@@ -36,7 +38,7 @@
                 <tr class="linha_candidatos">
                     <td><input type="radio" name="candidato" value="Wanderson Quinto" required><span>Wanderson Quinto</span></td>
                     <td><input type="radio" name="candidato" value="Maria Graciete" required><span>Maria Graciete</span></td>
-                    <td><input type="radio" name="candidato" value="Outros" required><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
+                    <td><input type="radio" name="candidato" value="Outros" required><span>Outros</span><input type="text" name="sugestao" id="sugestao" placeholder="Coloque sua sugestão aqui" disabled></td>
                     
                 </tr>
                 <tr class="linha_botao">
@@ -50,6 +52,7 @@
         <br>
         <br>
         <div id="container"></div>
+        <div id="resultTable"></div>
     </div>
 </body>
 </html>

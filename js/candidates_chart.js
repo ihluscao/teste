@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             title: {
                 text: 'Parciais Eleitorais',
-                align: 'left'
+                align: 'middle'
             },
             subtitle: {
                 text: 'Fonte: nosso banco de dados',
-                align: 'left'
+                align: 'middle'
             },
             accessibility: {
                 point: {

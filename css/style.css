@@ -88,3 +88,25 @@ input[name="matricula"]{
     width: 100%; 
     height: 400px;
 }
+#resultTable {
+    text-align: center;
+    margin: 20px auto; /* Centralizar a tabela horizontalmente */
+    max-width: 800px; /* Defina a largura máxima da tabela para controlar o seu tamanho */
+    padding: 10px;
+  }
+  
+  #resultTable table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #resultTable table th, #resultTable table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #resultTable table th {
+    background-color: #f2f2f2;
+  }
+  
