@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Votação - UEPA</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -33,9 +34,9 @@
                     <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
                 </tr>
                 <tr class="linha_candidatos">
-                    <td><input type="radio" name="candidato" value="cand1" required><span>Quinto</span></td>
-                    <td><input type="radio" name="candidato" value="cand2" required><span>Graciete</span></td>
-                    <td><input type="radio" name="candidato" value="cand3" required><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
+                    <td><input type="radio" name="candidato" value="Quinto" required><span>Quinto</span></td>
+                    <td><input type="radio" name="candidato" value="Graciete" required><span>Graciete</span></td>
+                    <td><input type="radio" name="candidato" value="Outros" required><input type="text" name="sugestao" placeholder="Coloque sua sugestão aqui"></td>
                     
                 </tr>
                 <tr class="linha_botao">
