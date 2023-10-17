@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,8 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="js/resultTable.js"></script>
     <script src="js/candidates_chart.js"></script>
-    </head>
+</head>
+
 <body>
     <header>
         <div class="logo">
@@ -25,23 +27,50 @@
     <div class="content">
         <h1>PESQUISA DE INTENÇÃO DE VOTOS</h1>
         <form class="pesquisa" action="insere.php" method="POST">
-            <table class="tabela_votacao" border="1">
-                <tr class="linha_matricula">
-                    <td colspan="3" class="matricula_cell"><span class="matricula_label">Digite sua matrícula:</span>
-                    <input name="matricula" type="text" inputmode="numeric" pattern="[0-9]*" minlength="10" maxlength="10" required></td><br>
+            <table class="tabela-votacao">
+                <tr class="linha-matricula">
+                    <td class="matricula-cell">
+                        <span class="matricula-label">Digite sua matrícula:</span>
+                        <input name="matricula" type="text" inputmode="numeric" pattern="[0-9]*" minlength="10" maxlength="10" required>
+                    </td>
                 </tr>
-                <tr>
-                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
-                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td>
-                    <td><img class="profile" src="img/masc_no_pic.png" alt=""></td><br>
+                <tr class="linha-candidato">
+                    <td class="candidato-radio">
+                        <input type="radio" name="candidato" value="Wanderson Quinto" required>
+                    </td>
+                    <td class="candidato-image">
+                        <img class="profile" src="img/masc_no_pic.png" alt="Wanderson Quinto">
+                    </td>
+                    <td class="candidato-details">
+                        <h3>Wanderson Quinto</h3>
+                        <p>Breve descrição do candidato Wanderson Quinto.</p>
+                    </td>
                 </tr>
-                <tr class="linha_candidatos">
-                    <td><input type="radio" name="candidato" value="Wanderson Quinto" required><span>Wanderson Quinto</span></td>
-                    <td><input type="radio" name="candidato" value="Maria Graciete" required><span>Maria Graciete</span></td>
-                    <td><input type="radio" name="candidato" value="Outros" required><span>Outros</span><input type="text" name="sugestao" id="sugestao" placeholder="Coloque sua sugestão aqui" disabled></td>
-                    
+                <tr class="linha-candidato">
+                    <td class="candidato-radio">
+                        <input type="radio" name="candidato" value="Maria Graciete" required>
+                    </td>
+                    <td class="candidato-image">
+                        <img class="profile" src="img/masc_no_pic.png" alt="Maria Graciete">
+                    </td>
+                    <td class="candidato-details">
+                        <h3>Maria Graciete</h3>
+                        <p>Breve descrição da candidata Maria Graciete.</p>
+                    </td>
                 </tr>
-                <tr class="linha_botao">
+                <tr class="linha-candidato">
+                    <td class="candidato-radio">
+                        <input type="radio" name="candidato" value="Outros" required>
+                    </td>
+                    <td class="candidato-image">
+                        <img class="profile" src="img/masc_no_pic.png" alt="Sugestão">
+                    </td>
+                    <td class="candidato-details">
+                        <h3>Sugestão</h3>
+                        <input type="text" name="sugestao" id="sugestao" placeholder="Coloque sua sugestão aqui" disabled>
+                    </td>
+                </tr>
+                <tr class="linha-botao">
                     <td colspan="3"><input class="btn" type="submit" name="enviar" value="Enviar"></td>
                 </tr>
             </table>
@@ -55,4 +84,5 @@
         <div id="resultTable"></div>
     </div>
 </body>
+
 </html>

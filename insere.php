@@ -13,7 +13,7 @@
         <div class="logo">
             <img class="img" src="img/logo_uepa2_0.png" alt="Logotipo da UEPA">
         </div>
-        <div class "barra-horizontal"></div>
+        <div class="barra-horizontal"></div>
     </header>
     <div class="content">
         <h1>Resposta do Processamento</h1>
@@ -53,10 +53,10 @@
                         if ($stmt->execute()) {
                             echo "<p class='success-message'>Dados inseridos com sucesso.</p>";
                         } else {
-                            echo "Erro ao inserir dados:<br> " . $stmt->error;
+                            echo "<p class='error-message'>Erro ao inserir dados:</p><br> " . $stmt->error;
                         }
                     } else {
-                        echo "Erro ao inserir o token no banco de dados: " . $stmt->error;
+                        echo "<p class='error-message'>Erro ao inserir o token no banco de dados: </p>" . $stmt->error;
                     }
                 } else {
                     echo "<p class='error-message'>Esta matrícula já votou. Não é possível votar novamente.</p>";
@@ -64,14 +64,16 @@
 
                 setcookie('user_token', $token, time() + 604800);
             } else {
-                echo "<p class 'error-message'>Você já votou nesta sessão. Não é possível votar novamente.</p>";
+                echo "<p class='error-message'>Você já votou nesta sessão. Não é possível votar novamente.</p>";
             }
 
             $conn->close();
             ?>
 
         </p>
-        <center><a href="index.php" class="btn">Retornar à Página Inicial</a></center>
+        <div class="btn-voltar">
+            <a href="index.php" class="btn">Retornar à Página Inicial</a>
+        </div>
     </div>
 </body>
 
